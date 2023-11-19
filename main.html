@@ -1,0 +1,54 @@
+<html>
+<head>    
+<title>AI Object Finder</title>   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>     
+<link rel="stylesheet" type="text/css" href="style.css">   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>  
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Blaka+Hollow&family=Fredoka+One&family=Mynerve&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<center>
+    <h1 class="title">AI Object Finder</h1>
+    <label class="text">The input name which you will give should match the names present in CoCo model then only it will detect </label>
+    <button data-toggle="modal" data-targget="#eg">See Example</button>
+    <br>
+    <label class="Name">Object's Name : </label>
+    <br>
+    <input type="text" class="Enter" id="write"></input><button onclick="start()">Detect</button>
+
+    <!--Modal For Names viewing-->
+    <div class="modal-fade" id="eg">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title">Names in CoCo model!</h4><button class="close" data-dismiss="'modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <img src="Labels_In_COCO.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal For Found-->
+    <div class="modal-fade" id="yes">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="title">Got it!</h4><button class="close" data-dismiss="'modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <img id="img" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+<script src="main.js"></script>
+</body>
+</html>
